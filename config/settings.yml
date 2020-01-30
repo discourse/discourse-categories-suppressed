@@ -1,0 +1,4 @@
+plugins:
+  categories_suppressed_from_latest:
+    type: category_list
+    default: ""
