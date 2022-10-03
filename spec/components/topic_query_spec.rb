@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 describe TopicQuery do
-  context "suppress categories from latest" do
+  context "with suppress categories from latest configured" do
     let(:category) { Fabricate(:category) }
 
     before do
