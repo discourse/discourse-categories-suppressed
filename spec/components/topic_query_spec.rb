@@ -1,14 +1,12 @@
 # frozen_string_literal: true
 
-require 'rails_helper'
+require "rails_helper"
 
 describe TopicQuery do
   context "with suppress categories from latest configured" do
     let(:category) { Fabricate(:category) }
 
-    before do
-      SiteSetting.categories_suppressed_from_latest = "#{category.id}"
-    end
+    before { SiteSetting.categories_suppressed_from_latest = "#{category.id}" }
 
     it "removes topics from suppressed categories" do
       topic1 = Fabricate(:topic)
